@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class PokerProject {
 
     public static void main(String[] args) throws FileNotFoundException {
-
-        Scanner Scan = new Scanner(new File("src/data"));
+        File File = new File("src/data");
+        Scanner Scan = new Scanner(File);
 
         int five = 0;
         int four = 0;
