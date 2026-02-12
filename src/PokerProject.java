@@ -27,7 +27,7 @@ public class PokerProject {
                 String[] indicards = isohand.split(","); // splits up the hand into individual cards by seperating with ",". Indi cards is just individual cards while isohand is isolated hand without the comments after the |
                 int[] duplicount = new int[5]; // this part is a little confusing but I would summarize it as counting whether or not a duplicate has popped up, meaning if a certain card shows up 4 times and another card shows up once it marks it. The question is how would I tell if it showed up before which I plan to use a for loop for where I compare the first card to the second card, second to the third and so on and using a check variable to make sure cards dont get counted twice.
                 boolean[] checked = new boolean[5]; // I plan to use this to make sure each card only gets counted once.
-
+                String bidvalue =  totalhand.substring(totalhand.indexOf('|'));
                 for(int i = 0; i < indicards.length; i++)
                 {
                     if(checked[i] == false)//checks if this card is used before
@@ -99,7 +99,7 @@ public class PokerProject {
         }
 
 
-
+        System.out.println(bidvalue);
         System.out.println("Number of five of a kind hands: " + five);
         System.out.println("Number of full house hands: " + full);
         System.out.println("Number of four of a kind hands: " + four);
@@ -108,5 +108,7 @@ public class PokerProject {
         System.out.println("Number of one pair hands: " + opair);
         System.out.println("Number of high card hands: " + high);
 
-    }}
+    }
+
+}
 
